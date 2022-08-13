@@ -10,6 +10,7 @@ import Web.HTML (window)
 import Web.HTML.HTMLDocument (toNonElementParentNode)
 import Web.HTML.Window (document)
 import Components.App (mkApp)
+import Effect.Console (logShow)
 
 main :: Effect Unit
 main = do
@@ -20,4 +21,6 @@ main = do
     Just container -> do
       reactRoot <- createRoot container
       app <- mkApp
+      logShow "app render start"
       renderRoot reactRoot (app {})
+      logShow "app render end"

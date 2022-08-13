@@ -1,3 +1,3 @@
-import { main } from "../output/Main";
+import { checkSvgDraw } from "./testSVG";
 
-main();
+checkSvgDraw();
